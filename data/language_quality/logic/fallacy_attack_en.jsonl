@@ -1,0 +1,52 @@
+{"label": 0, "prompt": "Birds can fly, penguins are birds, so", "annotation": "Penguins are birds,"}
+{"label": 0, "prompt": "Trains can travel fast on rails, cars have wheels, so", "annotation": "Cars have wheels,"}
+{"label": 0, "prompt": "Fish can breathe underwater, cats are animals, so", "annotation": "Cats are animals,"}
+{"label": 0, "prompt": "Some people can run 500 meters in 10 seconds, Xiao Ming is a person, so", "annotation": "Xiao Ming is a person,"}
+{"label": 0, "prompt": "The elephant is the largest animal on land, the whale is an animal, so", "annotation": "Whales are animals,"}
+{"label": 0, "prompt": "The sun rises from the east every day, the moon is in the sky, so", "annotation": "The moon is in the sky,"}
+{"label": 0, "prompt": "People can speak, babies are people, so", "annotation": "Babies are people,"}
+{"label": 0, "prompt": "All books are made of paper, e-books are books, so", "annotation": "E-books are books,"}
+{"label": 0, "prompt": "Most mammals have hair, whales are mammals, so", "annotation": "Mammals usually have hair, but whales are a special kind of mammal, they have almost no hair."}
+{"label": 0, "prompt": "Birds don't swim, penguins are birds, so", "annotation": "Birds usually don't swim, but penguins are a special kind of bird, penguins can swim."}
+{"label": 0, "prompt": "Aircraft have wings, helicopters are aircraft, so", "annotation": "Aircraft generally have wings, although helicopters are also classified as aircraft, the design of helicopters is different from traditional fixed-wing aircraft, they do not have a fixed wing structure."}
+{"label": 0, "prompt": "Software needs to be installed separately, the operating system is software, so", "annotation": "Software generally needs to be installed separately, the operating system is also software, but the operating system is usually pre-installed on computer hardware, it does not require manual installation by the user."}
+{"label": 0, "prompt": "Transportation tools need fuel, bicycles are transportation tools, so", "annotation": "Transportation tools usually require fuel, but bicycles are a kind of human-powered transportation tool, they do not require fuel."}
+{"label": 0, "prompt": "Metals are conductive, there are metal parts on wooden chairs, so", "annotation": "Metals usually have electrical conductivity, but the metal parts on wooden chairs may be decorative, wooden chairs do not necessarily have electrical functions."}
+{"label": 0, "prompt": "Most animals have four legs, snakes are animals, so", "annotation": "Animals usually have four legs, but snakes are a special kind of animal, they do not have four legs."}
+{"label": 0, "prompt": "Birds can fly, ostriches are birds, so", "annotation": "Birds usually can fly, but ostriches are a special kind of bird, they cannot fly due to their body size."}
+{"label": 0, "prompt": "Fruit trees can bear fruit, cacti are plants, so", "annotation": "Cacti and fruit trees are both plants, fruit trees can bear fruit, but cacti are not fruit trees, they generally do not bear fruit."}
+{"label": 0, "prompt": "Metals are generally hard, aluminum foil is metal, so", "annotation": "Metals are generally hard, but aluminum foil is metal, but it is a thin and soft metal."}
+{"label": 0, "prompt": "Clocks have hands, digital clocks are clocks, so", "annotation": "Clocks generally have hands, but digital clocks are a special kind of clock, they use digital display time, they do not have traditional hand structures."}
+{"label": 0, "prompt": "Most flowers bloom in spring, plum blossoms are also flowers, so", "annotation": "Flowers usually bloom in spring, but plum blossoms usually bloom in winter."}
+{"label": 0, "prompt": "Most aircraft have wings, hot air balloons are a kind of aircraft, so", "annotation": "Aircraft generally have wings, hot air balloons are also a kind of aircraft, but they do not need wings to fly."}
+{"label": 0, "prompt": "The seawater on earth is salty, sea ice comes from seawater, so", "annotation": "Most of the water on earth is indeed salty, but sea ice contains salt."}
+{"label": 0, "prompt": "Plants need sunlight for photosynthesis, mushrooms are organisms, so", "annotation": "Most plants need sunlight for photosynthesis, but mushrooms are a special kind of organism, they are similar to plants but not plants, they do not perform photosynthesis."}
+{"label": 0, "prompt": "Most substances are solid at room temperature, water is a substance, so", "annotation": "Most of the substances on earth are solid at room temperature, but water is a special substance, it is liquid at room temperature."}
+{"label": 0, "prompt": "People on the American continent usually speak Spanish, Brazil is a country on the American continent, so", "annotation": "Most people on the American continent speak Spanish, but Brazil is a country on the American continent where Portuguese is spoken, Brazilians usually use Portuguese."}
+{"label": 0, "prompt": "Most islands are surrounded by seawater, inland lake islands are islands, so", "annotation": "Most of the islands on earth are surrounded by seawater, but inland lake islands are a special kind of island, they are surrounded by lake water instead of seawater."}
+{"label": 0, "prompt": "Aircraft have engines, paragliders are flying equipment, so", "annotation": "Aircraft usually have engines for propulsion, paragliders are a special kind of flying equipment, they glide on air currents and do not need engines."}
+{"label": 0, "prompt": "Most fruits are sweet, avocados are also fruits, so", "annotation": "Most fruits are sweet, but avocados, a type of fruit, are not sweet."}
+{"label": 0, "prompt": "Water often exists in liquid form, ice is a form of water, so", "annotation": "Water is usually liquid, but ice is a form of solid water."}
+{"label": 0, "prompt": "People need to breathe gas to survive, coal gas is also gas, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "People observe the world with both eyes, blind people are also people, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Plants usually get their energy from photosynthesis, carnivorous plants like pitcher plants are also plants, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Power plants mostly generate electricity through thermal power, hydroelectric power stations are also power plants, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Bacteria often cause diseases in humans, probiotics are also bacteria, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Humans acquire sound through ears, deaf people are also humans, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "People communicate with each other through mobile phones, ancient people are also people, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Sailing ships are boats that move by wind power, aircraft carriers are also boats, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Argentina is a world football powerhouse, China also has many people who love football, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Brushes are usually used to write on rice paper, pencils are also pens, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Chrysanthemums bloom in autumn, winter jasmine is also a flower, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "The duty of doctors is to treat humans, veterinarians are also doctors, so", "annotation": "Omitted"}
+{"label": 0, "prompt": "Chinese characters contain radicals and components, English characters are also characters, so", "annotation": ""}
+{"label": 0, "prompt": "Over 80% of the total number of animals are arthropods, carp are also animals, so", "annotation": ""}
+{"label": 0, "prompt": "Qin Shi Huang built terracotta warriors for himself, Emperor Wu of Han is also an emperor, so", "annotation": ""}
+{"label": 0, "prompt": "Trees lose their leaves in autumn, pine trees are also trees, so", "annotation": ""}
+{"label": 0, "prompt": "Meri Snow Mountain is covered with snow all year round, Mount Tai is also a mountain, so", "annotation": ""}
+{"label": 0, "prompt": "Polar bears live in glaciers, there are also glaciers in the Antarctic, so", "annotation": ""}
+{"label": 0, "prompt": "Penguins live in glaciers, there are also glaciers in the Arctic, so", "annotation": ""}
+{"label": 0, "prompt": "People travel long distances by plane, ancient people are also people, so", "annotation": ""}
+{"label": 0, "prompt": "Some vehicles can carry up to fifty passengers, sedans are also vehicles, so", "annotation": ""}
+{"label": 0, "prompt": "Mail is delivered by postmen, email is also mail, so", "annotation": ""}
+{"label": 0, "prompt": "You need to change into sports shoes before exercising, swimming is also a sport, so", "annotation": ""}

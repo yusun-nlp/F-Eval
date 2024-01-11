@@ -1,0 +1,15 @@
+{"label": 0, "prompt": "Birds can fly, penguins are birds, so", "annotation": "Penguins are birds,"}
+{"label": 0, "prompt": "Trains can travel fast on rails, cars have wheels, so", "annotation": "Cars have wheels,"}
+{"label": 0, "prompt": "Fish can breathe underwater, cats are animals, so", "annotation": "Cats are animals,"}
+{"label": 0, "prompt": "Some people can run 500 meters in 10 seconds, Xiao Ming is a person, so", "annotation": "Xiao Ming is a person,"}
+{"label": 0, "prompt": "The elephant is the largest animal on land, the whale is an animal, so", "annotation": "Whales are animals,"}
+{"label": 0, "prompt": "The sun rises from the east every day, the moon is in the sky, so", "annotation": "The moon is in the sky,"}
+{"label": 0, "prompt": "People can speak, babies are people, so", "annotation": "Babies are people,"}
+{"label": 0, "prompt": "All books are made of paper, e-books are books, so", "annotation": "E-books are books,"}
+{"label": 0, "prompt": "Most mammals have hair, whales are mammals, so", "annotation": "Mammals usually have hair, but whales are a special kind of mammal, they have almost no hair."}
+{"label": 0, "prompt": "Birds don't swim, penguins are birds, so", "annotation": "Birds usually don't swim, but penguins are a special kind of bird, penguins can swim."}
+{"label": 0, "prompt": "Aircraft have wings, helicopters are aircraft, so", "annotation": "Aircraft generally have wings, although helicopters are also classified as aircraft, the design of helicopters is different from traditional fixed-wing aircraft, they do not have a fixed wing structure."}
+{"label": 0, "prompt": "Software needs to be installed separately, the operating system is software, so", "annotation": "Software generally needs to be installed separately, the operating system is also software, but the operating system is usually pre-installed on computer hardware, it does not require manual installation by the user."}
+{"label": 0, "prompt": "Transportation tools need fuel, bicycles are transportation tools, so", "annotation": "Transportation tools usually require fuel, but bicycles are a kind of human-powered transportation tool, they do not require fuel."}
+{"label": 0, "prompt": "Metals are conductive, there are metal parts on wooden chairs, so", "annotation": "Metals usually have electrical conductivity, but the metal parts on wooden chairs may be decorative, wooden chairs do not necessarily have electrical functions."}
+{"label": 0, "prompt": "Most animals have four legs, snakes are animals, so", "annotation": "Animals usually have four legs, but snakes are a special kind of animal, they do not have four legs."}
