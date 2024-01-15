@@ -1,0 +1,15 @@
+{"label": 0,"prompt": "Pete is jealous of Martin, even though he is very successful. He refers to (", "answer": "Pete"}
+{"label": 0,"prompt": "Pete is jealous of Martin because he is very successful. He refers to (", "answer": "Martin"}
+{"label": 0,"prompt": "Jack bullied Alan, so I punished him. He refers to (", "answer": "Jack"}
+{"label": 0,"prompt": "Jack bullied Alan, so I saved him. He refers to (", "answer": "Alan"}
+{"label": 0, "prompt": "I poured the water from the bottle into the cup until it was empty. It refers to (", "answer": "bottle"}
+{"label": 0, "prompt": "I poured the water from the bottle into the cup until it was full. It refers to (", "answer": "cup"}
+{"label": 0, "prompt": "John couldn't see the stage in front of Billy because he was too short. He refers to (", "answer": "John"}
+{"label": 0, "prompt": "John couldn't see the stage in front of Billy because he was too tall. He refers to (", "answer": "Billy"}
+{"label": 0, "prompt": "Jim yelled at Kevin because he was too upset. He refers to (", "answer": "Jim"}
+{"label": 0, "prompt": "Jim comforted Kevin because he was too upset. He refers to (", "answer": "Kevin"}
+{"label": 0, "prompt": "The potato was placed above the flour, so it had to be moved first. It refers to (", "answer": "potato"}
+{"label": 0, "prompt": "The potato was placed under the flour, so it had to be moved first. It refers to (", "answer": "flour"}
+{"label": 0, "prompt": "Sid explained his theory to Mark but still couldn't convince him. He refers to (", "answer": "Mark"}
+{"label": 0, "prompt": "Sid explained his theory to Mark but still couldn't understand him. He refers to (", "answer": "Sid"}
+{"label": 0, "prompt": "I cleaned the knife with an old rag, then threw it into the trash can. It refers to (", "answer": "rag"}

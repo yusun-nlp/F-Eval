@@ -1,0 +1,15 @@
+{"pronoun": "他们", "pronoun_loc": 63, "quote": "他们害怕暴力", "quote_loc": 63, "label": 0, "prompt": "市议会议员因为他们害怕暴力而拒绝了示威者的许可，他们害怕暴力。", "opt1": "市议会议员", "opt2": "示威者"}
+{"pronoun": "他们", "pronoun_loc": 63, "quote": "他们主张暴力", "quote_loc": 63, "label": 1, "prompt": "市议会议员因为他们主张暴力而拒绝了示威者的许可，他们主张暴力。", "opt1": "市议会议员", "opt2": "示威者"}
+{"pronoun": "它", "pronoun_loc": 55, "quote": "它太大了", "quote_loc": 55, "label": 0, "prompt": "奖杯不能放进棕色的手提箱，因为它太大了。", "opt1": "奖杯", "opt2": "手提箱"}
+{"pronoun": "它", "pronoun_loc": 55, "quote": "它太小了", "quote_loc": 55, "label": 1, "prompt": "奖杯不能放进棕色的手提箱，因为它太小了。", "opt1": "奖杯", "opt2": "手提箱"}
+{"pronoun": "她", "pronoun_loc": 47, "quote": "她已经收到", "quote_loc": 47, "label": 0, "prompt": "琼确保感谢苏珊所有她已经收到的帮助。", "opt1": "琼", "opt2": "苏珊"}
+{"pronoun": "她", "pronoun_loc": 47, "quote": "她已经给予", "quote_loc": 47, "label": 1, "prompt": "琼确保感谢苏珊所有她已经给予的帮助。", "opt1": "琼", "opt2": "苏珊"}
+{"pronoun": "他", "pronoun_loc": 44, "quote": "他没有成功。", "quote_loc": 44, "label": 0, "prompt": "保罗试图通过电话打给乔治，但他没有成功。", "opt1": "保罗", "opt2": "乔治"}
+{"pronoun": "他", "pronoun_loc": 44, "quote": "他不在。", "quote_loc": 44, "label": 1, "prompt": "保罗试图通过电话打给乔治，但他不在。", "opt1": "保罗", "opt2": "乔治"}
+{"pronoun": "他", "pronoun_loc": 45, "quote": "他很不情愿", "quote_loc": 45, "label": 0, "prompt": "律师问了证人一个问题，但他很不情愿重复。", "opt1": "律师", "opt2": "证人"}
+{"pronoun": "他", "pronoun_loc": 45, "quote": "他很不情愿", "quote_loc": 45, "label": 1, "prompt": "律师问了证人一个问题，但他很不情愿回答。", "opt1": "律师", "opt2": "证人"}
+{"pronoun": "它", "pronoun_loc": 52, "quote": "它行驶得太快。", "quote_loc": 52, "label": 0, "prompt": "送货卡车飞快地驶过了校车，因为它行驶得太快。", "opt1": "送货卡车", "opt2": "校车"}
+{"pronoun": "它", "pronoun_loc": 52, "quote": "它行驶得太慢。", "quote_loc": 52, "label": 1, "prompt": "送货卡车飞快地驶过了校车，因为它行驶得太慢。", "opt1": "送货卡车", "opt2": "校车"}
+{"pronoun": "他", "pronoun_loc": 65, "quote": "他是冠军", "quote_loc": 65, "label": 0, "prompt": "当长期竞争对手比尔透露他是比赛的冠军时，弗兰克感到自己得到了证实。", "opt1": "弗兰克", "opt2": "比尔"}
+{"pronoun": "他", "pronoun_loc": 62, "quote": "他是冠军", "quote_loc": 62, "label": 1, "prompt": "当长期竞争对手比尔透露他是比赛的冠军时，弗兰克感到心痛。", "opt1": "弗兰克", "opt2": "比尔"}
+{"pronoun": "他", "pronoun_loc": 38, "quote": "他太弱了。", "quote_loc": 38, "label": 0, "prompt": "男人因为太弱了，不能把他的儿子举起来。", "opt1": "这个男人", "opt2": "他的儿子"}
