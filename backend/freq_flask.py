@@ -15,6 +15,7 @@ from collections import defaultdict
 import os.path as osp
 from typing import Dict, List, Optional
 import spacy
+import sys
 import numpy as np
 import json
 from scipy.stats import spearmanr
@@ -22,6 +23,8 @@ from scipy.stats import spearmanr
 import re
 
 app = Flask(__name__)
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 def detect_main_language(text):
@@ -117,7 +120,7 @@ def contradiction_nli_evaluator():
     model_path = 'MoritzLaurer/mDeBERTa-v3-base-mnli-xnli'
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForSequenceClassification.from_pretrained(model_path)
-    model = model.to('cuda')
+    model = model.to(device)
 
     # get contradiction pair
     def get_contradiction_pair(sents):
@@ -133,7 +136,8 @@ def contradiction_nli_evaluator():
             prefix_sent += ' ' + sent
         return contradiction_pairs
 
-    scores = []
+    num_pairs = 0
+    num_contradiction = 0
     details = []
     for idx, pred in enumerate(predictions):
         # load model and text split
@@ -147,7 +151,6 @@ def contradiction_nli_evaluator():
         nlp = spacy.load(split_model)
         label_num = [0, 0, 0]
         # split sentences
-        print(references[idx], pred)
         all_text = references[idx] + ' ' + pred
         sents = nlp(all_text)
         sents = [sent.text for sent in sents.sents]
@@ -158,28 +161,28 @@ def contradiction_nli_evaluator():
         # compute nli score
         for c_pair in contradiction_pairs:
             inputs = tokenizer(c_pair[0], c_pair[1], truncation=True, return_tensors="pt")
-            outputs = model(inputs['input_ids'].to('cuda'))
+            outputs = model(inputs['input_ids'].to(device))
             prediction = torch.softmax(outputs["logits"][0], -1).tolist()
             label = torch.argmax(outputs["logits"][0]).item()
             label_names = ["entailment", "neutral", "contradiction"]
             prediction = {name: round(float(pred) * 100, 1) for pred, name in zip(prediction, label_names)}
             label_num[label] += 1
+        num_pairs += len(contradiction_pairs)
+        num_contradiction += label_num[2]
 
         detail = {'pred': pred, 'answer': references[idx], 'correct': {}}
         if len(contradiction_pairs) == 0:
-            detail['correct']['contradiction'] = 1
+            detail['correct']['contradiction'] = 0
             detail['correct']['neutral'] = 0
             detail['correct']['entailment'] = 0
-            scores.append(1)
         else:
             detail['correct']['contradiction'] = label_num[2] / len(contradiction_pairs)
             detail['correct']['neutral'] = label_num[1] / len(contradiction_pairs)
             detail['correct']['entailment'] = label_num[0] / len(contradiction_pairs)
-            scores.append(label_num[2] / len(contradiction_pairs))
         details.append(detail)
     result = {
         'details': details,
-        'contradiction_score': sum(scores) / len(scores),
+        'contradiction_score': num_contradiction / num_pairs,
     }
     return jsonify(result)
 
@@ -198,15 +201,15 @@ def text2word_evaluator():
     predictions = data["predictions"]
     references = data["references"]
 
-    zh_path = './word.jsonl'
-    en_path = './ecdict.jsonl'
+    zh_path = 'word.jsonl'
+    en_path = 'ecdict.jsonl'
     with open(zh_path, 'r', encoding='utf-8') as f:
         zh_data = [json.loads(line) for line in f]
     with open(en_path, 'r', encoding='utf-8') as f:
         en_data = [json.loads(line) for line in f]
 
     model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2')
-    model = model.to('cuda')
+    model = model.to(device)
 
     scores = []
     details = []
@@ -283,22 +286,26 @@ class Evaluators:
             for line in f.readlines():
                 if len(line) > 0:
                     item = json.loads(line)
-                    self.english_word_freq[item['headWord']] = 0.1
+                    if item['headWord'] not in self.english_word_freq:
+                        self.english_word_freq[item['headWord']] = 0.0
         with open('CET6_2.json') as f:  # tier 2
             for line in f.readlines():
                 if len(line) > 0:
                     item = json.loads(line)
-                    self.english_word_freq[item['headWord']] = 0.7
+                    if item['headWord'] not in self.english_word_freq:
+                        self.english_word_freq[item['headWord']] = 0.05
         with open('Level4luan_2.json') as f:  # tier 3
             for line in f.readlines():
                 if len(line) > 0:
                     item = json.loads(line)
-                    self.english_word_freq[item['headWord']] = 0.9
+                    if item['headWord'] not in self.english_word_freq:
+                        self.english_word_freq[item['headWord']] = 0.1
         with open('Level8luan_2.json') as f:  # tier 4
             for line in f.readlines():
                 if len(line) > 0:
                     item = json.loads(line)
-                    self.english_word_freq[item['headWord']] = 1.0
+                    if item['headWord'] not in self.english_word_freq:
+                        self.english_word_freq[item['headWord']] = 0.25
         with open('THUOCL.txt', 'r') as f:
             for line in f.readlines():
                 if len(line) > 0:
@@ -318,10 +325,10 @@ class Evaluators:
         self.non_chinese_char_score = 0.0  # Used for Chinese character, None for not account, otherwise it's a score in [0, 1]
         self.non_english_word_score = None  # Used for English word, None for not account, otherwise it's a score in [0, 1]
 
-        self.chinese_ppl_tokenizer = AutoTokenizer.from_pretrained("/mnt/petrelfs/share_data/sunyu2/baichuan2-7b",
-                                                                   use_fast=False, trust_remote_code=True)
-        self.chinese_ppl_model = AutoModelForCausalLM.from_pretrained("/mnt/petrelfs/share_data/sunyu2/baichuan2-7b",
-                                                                      device_map="auto", trust_remote_code=True)
+        self.chinese_ppl_tokenizer = AutoTokenizer.from_pretrained(
+            "deepseek-llm-7b-base")
+        self.chinese_ppl_model = AutoModelForCausalLM.from_pretrained(
+            "deepseek-llm-7b-base", device_map="auto", trust_remote_code=True)
         # self.chinese_ppl_tokenizer = AutoTokenizer.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", use_fast=False, trust_remote_code=True)
         # self.chinese_ppl_model = AutoModelForCausalLM.from_pretrained("baichuan-inc/Baichuan2-7B-Chat", device_map="auto", trust_remote_code=True)
         self.ppl_pentaly = 10.0
@@ -346,8 +353,8 @@ class Evaluators:
                 d_nlls.append(self.ppl_pentaly)
                 lens.append(1)
             else:
-                inputs_Fhalf = self.chinese_ppl_tokenizer(_data['prompt'], return_tensors='pt').to('cuda:0')
-                inputs_Shalf = self.chinese_ppl_tokenizer(_data['prompt'] + pred, return_tensors='pt').to('cuda:0')
+                inputs_Fhalf = self.chinese_ppl_tokenizer(_data['prompt'], return_tensors='pt').to(device)
+                inputs_Shalf = self.chinese_ppl_tokenizer(_data['prompt'] + pred, return_tensors='pt').to(device)
                 ret = self.chinese_ppl_model(input_ids=inputs_Fhalf['input_ids'], labels=inputs_Fhalf['input_ids'])
                 ppl_Fhalf = ret[0].item()
                 if ppl_Fhalf != ppl_Fhalf:
@@ -521,8 +528,8 @@ class Evaluators:
             freq_samples.append(_freq)
 
         details = [{'pred': '', 'answer': '', 'correct': x} for x in
-                   [(np.tanh(5 * np.mean(x)) if len(x) > 0 else 0.0) for x in freq_samples]]
-        return {'score': np.tanh(5 * np.mean(sum(freq_samples, []))), 'details': details}
+                   [(np.mean(x) * 100.0 if len(x) > 0 else 0.0) for x in freq_samples]]
+        return {'score': 100.0 * np.mean(sum(freq_samples, [])), 'details': details}
 
 
 evaluator = Evaluators()
