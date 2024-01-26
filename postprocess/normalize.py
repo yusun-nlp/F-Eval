@@ -3,7 +3,8 @@ import csv
 
 import numpy as np
 
-dir = '/cpfs01/user/sunyu2/eval/opencompass/outputs/language_quality/main_results/20240111_123023'
+# the opencompass dir of the origin results
+dir = ''
 
 datasets = [
     'word-diversity',
@@ -58,4 +59,3 @@ with open(f'{dir}/results_normalized.csv', 'w') as f:
     writer.writerow(header)
     for row in all_results:
         writer.writerow(row)
-

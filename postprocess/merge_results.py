@@ -2,7 +2,7 @@ import json
 import csv
 
 # the opencompass dir of the origin results
-dir = '/cpfs01/user/sunyu2/eval/opencompass/outputs/language_quality/main_results/20240111_123023'
+dir = ''
 
 # all test datasets
 combined_datasets = [
