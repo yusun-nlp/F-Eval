@@ -9,7 +9,7 @@ logic.
 
 Overall and selected dataset in F-Eval.
 
-<img src="https://s11.ax1x.com/2024/01/26/pFmvkUx.png" width="80%" height="80%">
+<img src="https://s11.ax1x.com/2024/01/26/pFmvkUx.png" width="70%" height="70%">
 
 ## Results
 
