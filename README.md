@@ -9,6 +9,10 @@ Overall and selected dataset in F-Eval.
 
 Evaluators for Word Diversity, Informative, Rule Following, Emotion Consistency and Contradiction.
 
+## Postprocess
+
+Postprocess of the results computed by Opencompass.
+
 ## Getting Started
 
 You need to run the `backend\freq_flask.py` first for evaluation.
