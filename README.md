@@ -2,6 +2,8 @@
 
 [[paper](https://arxiv.org/abs/2401.14869)] [Code in OpenCompass coming soon]
 
+Formal repo: [https://github.com/OpenLMLab/F-Eval](https://github.com/OpenLMLab/F-Eval)
+
 F-Eval is a bilingual evaluation benchmark to evaluate the fundamental abilities, including expression, commonsense and
 logic.
 
