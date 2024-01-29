@@ -1,6 +1,6 @@
 # F-Eval: Asssessing Fundamental Abilities with Refined Evaluation Methods
 
-[In Progress ...]
+[[paper](https://arxiv.org/abs/2401.14869)] [Code in OpenCompass coming soon]
 
 F-Eval is a bilingual evaluation benchmark to evaluate the fundamental abilities, including expression, commonsense and
 logic.
